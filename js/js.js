@@ -15,6 +15,25 @@ $(function() {
                     endOfData.innerHTML = '<br>-------- END OF DATA --------<br><br>';
 
                     document.body.appendChild(beginOfData);
+                    
+                    //petla
+                    
+                    response.forEach(function(element){
+                      var pUserId = document.createElement('p');  
+                            var pUserName = document.createElement('p');  
+                            var pUserURL = document.createElement('p');  
+                        
+                        pUserId.innerHTML = element.id;
+                        pUserName.innerHTML = element.username;
+                           pUserURL.innerHTML = element.website;
+                        
+                        document.body.appendChild(pUserId);
+                        document.body.appendChild(pUserName);
+                        document.body.appendChild(pUserURL);
+                    });
+                    
+                    //koniec petli
+                    
                     document.body.appendChild(endOfData);
 
                 },
