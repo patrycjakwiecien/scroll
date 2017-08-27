@@ -18,7 +18,7 @@ $(function() {
                     
                     //petla
                     
-                    response.forEach(function(element){
+                   /* response.forEach(function(element){
                       var pUserId = document.createElement('p');  
                             var pUserName = document.createElement('p');  
                             var pUserURL = document.createElement('p');  
@@ -30,10 +30,43 @@ $(function() {
                         document.body.appendChild(pUserId);
                         document.body.appendChild(pUserName);
                         document.body.appendChild(pUserURL);
-                    });
+                    });*/
                     
                     //koniec petli
                     
+                    
+                    //przyklady petli:
+                    // for(wartosc poczatkowa licznika; warunek wykonywania(dopoki jest spelniony ); modyfikacja licznika),uzywamy kiedy znamy ilosc przebiegow, potrafimy zdefniowac warunek zakonczenia, length zraca od jeden elementy do wykonania, wykonaj petle i=0, sprawdz licznik i znowu wykonaj petle
+                    
+                   /* for( var i = 0; i < response.length i++) {
+                        var pUserId = document.createElement('p');
+                        
+                        pUserId.innerHTML = response[i].id;
+                        document.body.appendChild(pUserId);
+                    } 
+                    
+                    //while(warunek wykonywania)
+                    
+                    var i = 0;
+                    while(i < response.length){
+                        var pUserId = document.createElement('p');
+                        
+                        pUserId.innerHTML = response[i].id;
+                        document.body.appendChild(pUserId); i++
+                        
+                    }*/
+                    
+                    var i = 0;
+                    
+                    do {
+                        var pUserId = document.createElement('p');
+                        
+                        pUserId.innerHTML = response[i].id;
+                        document.body.appendChild(pUserId);
+                        i++;
+                        
+                    } while(i < response.length);
+                         
                     document.body.appendChild(endOfData);
 
                 },
